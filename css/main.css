@@ -57,7 +57,28 @@ section {
 }
 
 .brand-name a:hover {
-    color: #ffb727;
+    color: #39b54a;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu h6{
+    font-size: 15px;
+    font-weight: 600;
+    color: #39b54a;
+    letter-spacing: 3px;
+    margin-right: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.menu h6:hover {
+    color: #ffffff;
 }
 
 .menu-bar {
@@ -97,13 +118,18 @@ section {
 }
 
 .navigation.active .navbar-item .close-btn{
-    padding: 20px 0;
-    margin-left: 380px;
+    margin: 20px 0 0 400px;
+    width: 30px;
+    height: 30px;
 }
 
 .navigation.active .navbar-item .close-btn img{
     width: 30px;
     cursor: pointer;
+}
+
+.navigation.active .navbar-item .navbar {
+    margin-top: 40px;
 }
 
 .navigation.active .navbar-item li {
@@ -136,7 +162,6 @@ section {
 .navigation.active .navbar-item li a:hover::before {
     width: 100%;
 }
-
 
 
 /* =====================
@@ -228,6 +253,26 @@ section {
     transition: 0.4s ease;
 }
 
+.slider-btn.active{
+    background: #39b54a;
+}
+
 .slider-btn:not(:first-child){
     margin-left: 10px;
+}
+
+.slider-btn:hover {
+    transform: scale(1.2);
+}
+
+.video-slide {
+    position: absolute;
+    width: 100%;
+    clip-path: circle(0% at 0 50%);
+}
+
+.video-slide.active{
+    clip-path: circle(150.0% at 0 50%);
+    transition: 2s ease;
+    transition-property: clip-path;
 }
