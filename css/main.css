@@ -659,3 +659,93 @@ section {
     bottom: -10px;
     left: 41%;
 }
+
+.review-content {
+    padding: 100px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 70px;
+}
+
+.review-content .culumn {
+    text-align: center;
+    padding: 30px 25px;
+    transition: 0.4s ease;
+}
+
+.review-content .culumn .culumn-icon i{
+    font-size: 40px;
+    color: #adadad;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.review-content .culumn .counter-number {
+    font-size: 40px;
+    color: #666666;
+    font-weight: 600;
+}
+
+.review-content .culumn h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 15px;
+    color: #909090;
+}
+
+.review-content .culumn:hover {
+    background: #39b54a;
+}
+
+.review-content .culumn:hover .culumn-icon i,
+.review-content .culumn:hover .counter-number,
+.review-content .culumn:hover h4 {
+    color: #ffffff;
+}
+
+
+
+/*============ products start ========*/
+
+.products-heading {
+    text-align: center;
+}
+
+.products-heading h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0081c9;
+    position: relative;
+}
+
+.products-heading h4::before {
+    content: "";
+    position: absolute;
+    background: #39b54a;
+    width: 40px;
+    height: 2px;
+    left: 475px;
+    top: 10px;
+
+}
+
+.products-heading h4::after {
+    content: "";
+    position: absolute;
+    background: #39b54a;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 510px;
+    top: 7px;
+}
+
+.products-heading h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    color: #111111;
+}
+
