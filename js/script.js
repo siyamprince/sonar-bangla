@@ -23,10 +23,10 @@ navLinks.forEach((navLink) => {
     })
 })
 
-const navBar = document.querySelector('.navbar');
+const header = document.querySelector('.header');
 
 window.addEventListener("scroll", function(){
-    navBar.classList.toggle("sticky", window.scrollY > 0);
+    header.classList.toggle("sticky", window.scrollY > 0);
 });
 
 
@@ -86,3 +86,19 @@ var repeat = function(activeClass){
 }
 repeat();
 
+
+// =================== card swiper ==================
+
+var swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+  });

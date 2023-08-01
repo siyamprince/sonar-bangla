@@ -47,6 +47,13 @@ section {
     padding: 15px 100px;
 }
 
+.header.sticky{
+    padding: 15px 100px;
+    position: fixed;
+    background-color: #2d3236ab;
+    transition: 0.4s;
+}
+
 
 
 .brand-name a{
@@ -54,6 +61,7 @@ section {
     font-weight: 600;
     letter-spacing: 2px;
     color: #ffffff;
+    transition: 0.4s ease;
 }
 
 .brand-name a:hover {
@@ -224,15 +232,21 @@ section {
     width: 900px;
 }
 
-.home-heading button{
+.home-heading button {
     padding: 10px 30px;
     font-size: 16px;
     font-weight: 600;
     border: 2px solid #c9c7c7;
     background: transparent;
     color: #ffffff;
-    margin-top: 20px;
+    margin-top: 50px;
     cursor: pointer;
+    transition: 0.4s;
+}
+
+.home-heading button:hover {
+    border-color: #39b54a;
+    color: #39b54a;
 }
 
 .slider-navigation {
@@ -275,4 +289,373 @@ section {
     clip-path: circle(150.0% at 0 50%);
     transition: 2s ease;
     transition-property: clip-path;
+}
+
+
+/*============ about start ================*/
+
+.about {
+    width: 100%;
+    height: 500px;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
+}
+
+.about-details h1{
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 900;
+    color: #0081c9;
+    position: relative;
+    z-index: 888;
+    width: 40%;
+    margin-top: 10px;
+}
+
+.about-details h1 span {
+    color: #39b54a;
+}
+
+.about-details h1::before {
+    content: "";
+    position: absolute;
+    width: 77%;
+    height: 3px;
+    background: #39b54a;
+    bottom: -5px;
+}
+
+.about-details h1::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #39b54a;
+    bottom: -8px;
+    left: 78px;
+}
+
+.about-details p {
+    margin-top: 30px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    line-height: 2;
+    color: rgb(99, 99, 99);
+    width: 450px;
+}
+
+.about-details button {
+    margin-top: 50px;
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    background: #0081c9;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.about-details button:hover {
+    background: #39b54a;
+    transform: scale(1.1);
+}
+
+.about-container .about-image img {
+    width: 550px;
+}
+
+
+/*============ services start ================*/
+
+.service-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.service-heading h6 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0081c9;
+    position: relative;
+}
+
+.service-heading h6::before {
+    content: "";
+    position: absolute;
+    background: #39b54a;
+    width: 40px;
+    height: 2px;
+    left: 480px;
+    top: 10px;
+
+}
+
+.service-heading h6::after {
+    content: "";
+    position: absolute;
+    background: #39b54a;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 515px;
+    top: 7px;
+}
+
+.service-heading h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    color: #111111;
+}
+
+.service-heading p {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 15px 0 0 230px;
+    color: rgb(99, 99, 99);
+    letter-spacing: 1px;
+    width: 700px;
+}
+
+.service-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding-top: 50px;
+    padding-left: 50px;
+}
+
+.service-content .culumn{
+    display: flex;
+    align-items: center;
+}
+
+.service-content .culumn h4{
+    font-size: 18px;
+}
+
+.service-content .culumn p {
+    font-size: 14px;
+    margin-top: 10px;
+    letter-spacing: 1px;
+    width: 300px;
+}
+
+.service-content .culumn button {
+    margin-top: 10px;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    color: #0081c9;
+}
+
+.service-content .culumn button  ion-icon{
+    font-size: 13px;
+    margin-left: 5px;
+    color: #0081c9;
+}
+
+.service-content .culumn img {
+    width: 130px;
+    position: absolute;
+}
+
+.service-content .culumn .culumn-info{
+    border: 2px solid #dfdede;
+    padding: 30px 30px 20px 100px;
+    margin-left: 50px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.service-content .culumn .culumn-info:hover {
+    border-color: #0081c9;
+    background: #0081c9;
+    border-radius: 30% 10px 10px 10px;
+}
+
+.service-content .culumn .culumn-info:hover h4,
+.service-content .culumn .culumn-info:hover p,
+.service-content .culumn .culumn-info:hover button{
+    color: #ffffff;
+}
+
+.service-content .culumn .culumn-info:hover button ion-icon{
+    color: #ffffff;
+}
+
+
+
+/*============ OurTeam start ================*/
+
+.team-heading {
+    width: 100%;
+    text-align: center;
+}
+
+.team-heading h4 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #0081c9;
+    position: relative;
+}
+
+.team-heading h4::before {
+    content: "";
+    position: absolute;
+    background: #39b54a;
+    width: 40px;
+    height: 2px;
+    left: 490px;
+    top: 10px;
+
+}
+
+.team-heading h4::after {
+    content: "";
+    position: absolute;
+    background: #39b54a;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    left: 525px;
+    top: 7px;
+}
+
+.team-heading h1 {
+    font-size: 35px;
+    font-weight: 700;
+    margin-top: 15px;
+    letter-spacing: 2px;
+    color: #111111;
+}
+
+.team-content {
+    padding-top: 100px;
+}
+
+.team-member {
+    width: 350px;
+    height: 430px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.team-member-image {
+    position: relative;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin-left: 120px;
+    margin-top: 30px;
+}
+
+.team-member-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    outline: 5px solid #39b54a;
+    outline-offset: 5px;
+}
+
+.member-info{
+   
+}
+.member-info h4{
+    font-size: 20px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.member-info h6{
+    font-size: 14px;
+    margin-top: 10px;
+    color: #39b54a;
+}
+
+.member-info p{
+    font-size: 13px;
+    width: 300px;
+    margin: 10px 0 0 40px;
+}
+
+.member-icons{
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.member-icons ion-icon {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #39b54a;
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.member-icons ion-icon:hover {
+    color: #43d657;
+    transform: scale(1.1);
+}
+
+
+.swiper-navBtn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transform: translateY(10px);
+    background: #d2ecd6;
+    color: #39b54a;
+}
+
+.swiper-navBtn::after,
+.swiper-navBtn::before{
+    font-size: 20px;
+}
+
+.swiper-pagination-bullet{
+    width: 12px;
+    height: 12px;
+    margin-top: 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #39b54a;
+}
+
+
+
+/*=========== review start ========*/
+
+.review-heading h1 {
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #111111;
+    position: relative;
+}
+
+.review-heading h1::before {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 2px;
+    background: #39b54a;
+    bottom: -10px;
+    left: 41%;
 }
