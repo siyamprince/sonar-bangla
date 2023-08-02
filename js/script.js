@@ -121,3 +121,33 @@ valueDisplays.forEach((valueDisplay) => {
         }
     }, duration);
 });
+
+
+
+//==================== Products =====================//
+
+let filterItems = document.querySelectorAll('.products-filters li');
+
+function activeProducts () {
+    filterItems.forEach (el => {
+        el.classList.remove('filter-active');
+        this.classList.add('filter-active');
+    });
+};
+
+filterItems.forEach(el => {
+    el.addEventListener('click', activeProducts);
+});
+
+//===== mixitup products ===============
+
+let mixerProducts = mixitup ('.products-wrap-container', {
+    selectors: {
+        target: '.products-item'
+    },
+    animation: {
+        duration: 300
+    }
+});
+
+
